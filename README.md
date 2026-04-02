@@ -90,6 +90,25 @@ Room values: `chat`, `workshop`, `porch` — or any string you define.
 
 ---
 
+## What you need
+
+Everything runs on Cloudflare — compute, database, vector search, AI. No external servers. No containers.
+
+| Service | What for | Required |
+|---------|----------|----------|
+| **Cloudflare Workers** (Paid plan) | Runs the chat handler and daemon | Yes |
+| **Cloudflare D1** | Stores all messages, sessions, summaries | Yes |
+| **Cloudflare Vectorize** | Semantic search across conversations | Yes |
+| **Cloudflare Workers AI** | Generates session summaries (Llama 3.1-8b, BGE-768) | Yes |
+| **[OpenRouter](https://openrouter.ai)** API key | The model that powers your companion (any model — Claude, MiMo, DeepSeek, etc.) | Yes |
+| **[ElevenLabs](https://elevenlabs.io)** API key | Text-to-speech — companion speaks each message aloud | Optional |
+
+OpenRouter lets you swap models without changing code. The chat settings panel lets you pick at runtime — MiMo V2 Pro for cheap long context, Claude Sonnet 4.5 for depth, o1/DeepSeek R1 for extended thinking.
+
+TTS requires an ElevenLabs API key and a voice ID. When enabled, each assistant message gets a speaker button. Auto-play voice can be toggled in chat settings.
+
+---
+
 ## Setup
 
 ### 1. Run the migration
