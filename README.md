@@ -9,6 +9,22 @@ NESTchat gives your companion a memory of every conversation — stored in D1, s
 
 ---
 
+## Screenshots
+
+### Chat interface
+![Chat UI](screenshots/chat-ui.png)
+*Cyberpunk design. Alex avatar, Fox health chip (spoons + pain) in header. + New saves current session and starts fresh. History opens the conversation browser.*
+
+### Chat history browser
+![Chat History](screenshots/chat-history.png)
+*Slide-out panel. Search conversations by meaning. Sessions labelled by room (CHAT / WORKSHOP) with message count and date. Click to read full transcript.*
+
+### Chat settings
+![Chat Settings](screenshots/chat-settings.png)
+*API provider selection (NESTeq Gateway or direct OpenRouter). Model picker at runtime — MiMo V2 Pro for long context, Claude/o1/DeepSeek R1 for depth or thinking. Auto-play voice (ElevenLabs TTS). Show thinking toggle.*
+
+---
+
 ## What NESTchat does
 
 **Persistence** — Every message saved to D1 via `ctx.waitUntil` (non-blocking, never slows the response).
